@@ -61,12 +61,13 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Expected results
 * Should display "Developer" for the user name.
 
-# Module 4: Check if user input is numerical
+# Module 4: Constrain user input number to card length
 1. Build and run CiCo
-2. Enter abcd
-3. Prompt for user to enter numerical numbers only
+2. Enter 0000
+3. Prompt for user to enter their 8 digit code
 4. Enter 00000000
+5. Prompt for user to enter their 8 digit code
+6. 00000000
 
 ## Expected results
-1. Should prompt user that numerical numbers are only allowed
-2. Display name and notify that user has checked in `
+1. Display name and notify that user has checked in 
