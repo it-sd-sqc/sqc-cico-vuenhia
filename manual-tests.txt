@@ -71,3 +71,12 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 
 ## Expected results
 1. Display name and notify that user has checked in 
+
+# Module 6: 
+## Test for professional color scheme
+# Test steps
+1. Build and run Cico.
+2. Enter abc123.
+
+##Expected results:
+*Program should display on a light gray background and black lettering.
