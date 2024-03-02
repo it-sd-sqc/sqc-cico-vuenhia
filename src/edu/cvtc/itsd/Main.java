@@ -37,11 +37,13 @@ public class Main {
   private static class InputFilter extends DocumentFilter {
     private static final int MAX_LENGTH = 8;
 
+    
+
     @Override
     public void insertString(FilterBypass fb, int offset, String stringToAdd, AttributeSet attr)
         throws BadLocationException
     {
-      if (fb.getDocument() != null) {
+      if (fb.getDocument().getLength() + stringToAdd.length() <= MAX_LENGTH) {
         super.insertString(fb, offset, stringToAdd, attr);
       }
       else {
@@ -53,7 +55,7 @@ public class Main {
     public void replace(FilterBypass fb, int offset, int lengthToDelete, String stringToAdd, AttributeSet attr)
         throws BadLocationException
     {
-      if (fb.getDocument() != null) {
+      if (fb.getDocument().getLength() - lengthToDelete + stringToAdd.length() <= MAX_LENGTH) {
         super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
       }
       else {
@@ -260,6 +262,9 @@ public class Main {
     fieldNumber.setForeground(Color.black);
     panelMain.add(fieldNumber);
 
+
+
+
     JButton updateButton = new JButton("Update");
     updateButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
     updateButton.addActionListener(new Update());
@@ -288,6 +293,17 @@ public class Main {
     labelState.setAlignmentX(JComponent.CENTER_ALIGNMENT);
     labelState.setForeground(Color.white);
     panelStatus.add(labelState);
+
+    JButton buttonReturn = new JButton("Exit");
+    buttonReturn.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Main.doneProcessing();
+        }
+      });
+    buttonReturn.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+    buttonReturn.setForeground(Color.green);
+    panelStatus.add(buttonReturn);
 
     panelStatus.add(Box.createVerticalGlue());
 

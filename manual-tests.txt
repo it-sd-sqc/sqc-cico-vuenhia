@@ -72,6 +72,14 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Expected results
 1. Display name and notify that user has checked in 
 
+#Module 5: Add button for checkin checkout
+1. Build and run CiCo
+2. Enter 00000000
+3. Clicked exit button or wait for time out
+
+## Expected results
+1. Return user to first page
+
 # Module 6: 
 ## Test for professional color scheme
 # Test steps
@@ -80,3 +88,4 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 
 ##Expected results:
 *Program should display on a light gray background and black lettering.
+
