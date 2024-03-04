@@ -88,3 +88,4 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 
 ##Expected results:
 *Program should display on a light gray background and black lettering.
+
